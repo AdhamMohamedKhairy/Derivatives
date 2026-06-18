@@ -24,8 +24,8 @@ html {
     padding: 20px 0;
 }
 
-h1 {
-    margin: 20px 0;
+h1, h2, h3, h5, h4, h6 {
+    margin: 20px;
     text-decoration: none;
     font-family: 'LaTeX-Mono', monospace;
 }
@@ -108,7 +108,7 @@ footer{
     text-align: center;
 }
 
-.imgcont {
+.imgcont, .chartcont {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,3 +130,46 @@ img{
     width: 300px;
 }
 
+#dis{
+    width: 900px; 
+    height: 500px;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.chartcont {
+    position: relative;
+    width: 900px;
+    margin: 40px auto;
+    text-align: center;
+    background-color: rgb(71, 73, 71);
+}
+
+.chart-title {
+    color: #d1cdc8;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+#dis svg {
+    shape-rendering: geometricPrecision;
+}
+
+.axis-label {
+    position: absolute;
+    color: #d1cdc8;
+    font-size: 1.1rem;
+    pointer-events: none;
+}
+
+.y-axis {
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+}
+
+.x-axis {
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}

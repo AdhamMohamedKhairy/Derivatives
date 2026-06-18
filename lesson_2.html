@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>derivatives with AboEl5yr</title>
     <link rel="stylesheet" href="style.css">
-    <script src="l2.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="l2.js"></script>
 </head>
 <body>
     <video src=""></video>
-    <h1 id="l1">Lesson 1: Introduction to Calculus</h1>
+    <h1 id="l1">Lesson 2: Introduction to Limits</h1>
     <video src=""></video>
     <p>
         Limits repreesent a value of a  function that normally is undefined.
@@ -20,8 +21,23 @@
         o\in limits, You aproach the number from the left and the right, and find what 
         f(2) <strong>APPROACHES</strong>, notice that I said from the left and the right
         because if it approches a different value from the other side, the function
-        is <strong>DISCONTINUIOUS</strong> for example:
+        is <strong>DISCONTINUIOUS</strong>, for example:
     </p>
-    <canvas></canvas>
+
+    $$f(x) = \begin{cases} x^2 & \text{if } x < 2 \\ x + 4 & \text{if } x > 2 \end{cases}$$
+
+    <div class="chartcont">
+        <div id="dis"></div>
+        <div class="axis-label y-axis">$$f(x)$$</div>
+        <div class="axis-label x-axis">$$x$$</div>
+    </div>
+
+    <p>
+        In this function, there is a hole at x=2, but since it isn't continious,
+        we can't take the \(\lim_{x \to 2} f(x)\).
+    </p>
+
+    <h2>Try It</h2>
+
 </body>
 </html>
