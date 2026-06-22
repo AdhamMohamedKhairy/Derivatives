@@ -117,7 +117,7 @@ footer{
     text-align: center;
 }
 
-.imgcont, .chartcont {
+.imgcont, .chartcont{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -130,7 +130,7 @@ footer{
     border-radius: 5px;
 }
 
-.vidcont {
+.vidcont, .utestcont {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,3 +279,54 @@ button, .but, .quiz-form button {
 .try{
     text-align: center;
 }
+
+.result-message.active {
+    color: #d1cdc8;
+}
+
+.mcq-options label{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.mcq-options{
+    margin: 30px;
+}
+
+.mcq{
+    appearance: none;
+    -webkit-appearance: none;
+    width: 1.8rem !important;
+    min-width: 1.8rem;
+    height: 1.8rem !important;
+    min-height: 1.8rem;
+    border: 2px solid #d1cdc8;
+    border-radius: 50% !important;
+    background-color: rgb(54, 56, 54);
+    display: inline-grid;
+    place-content: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-sizing: border-box;
+}
+.mcq:hover{
+    box-shadow: 0 0 8px #d1cdc8;
+    transform: scale(1.1);
+}
+
+.mcq:checked{
+    background-color: #d1cdc8;
+    border-color: #d1cdc8;
+}
+
+.mcq:checked::before {
+    content: "";
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50%;
+    background-color: rgb(22, 22, 22) !important;
+}
+

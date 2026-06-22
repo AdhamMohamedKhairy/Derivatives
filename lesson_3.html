@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-    <script src="l2.js"></script>
+    <script src="l3.js"></script>
 </head>
 <body>
-    <h1 id="l1">Lesson 2: Introduction to Limits</h1>
+    <h1 id="l1">Lesson 2: Proprties of limits</h1>
     <video src=""></video>
     <p>
         Here are some properties of limits if \(\lim_{x \to a} f(x) = M, \lim_{x \to a} g(x) = N\):
@@ -31,7 +31,12 @@
     <h2 class="try">Try It:</h2>
     <div class="quizcont">
         <form id="quiz-form-1" class="quiz-form">
-            <label for="q1"></label>
+            <label for="q1">
+            Given
+            $$\lim_{x\to 2} f(x)=3,\qquad \lim_{x\to 2} g(x)=5$$
+            Find
+            $$\lim_{x\to 2}\left(2f(x)-3g(x)\right)$$         
+        </label>
             <div class="input-group">
                 <input type="number" id="q1" step="any" required placeholder="Your answer...">
                 <button type="submit">Submit</button>
@@ -40,16 +45,26 @@
         </form>
         
         <form id="quiz-form-2" class="quiz-form">
-            <label for="q2">$$\lim_{x \to 2} \frac{x^2-2}{x-2}$$</label>
+            <label for="q2">
+            Given
+            $$\lim_{x\to 1} f(x)=4,\qquad \lim_{x\to 1} g(x)=2,$$
+            Find
+            $$\lim_{x\to 1}\frac{f(x)^2+g(x)}{3f(x)-g(x)^3}$$
+            </label>
             <div class="input-group">
-                <input type="number" id="q2" step="any" required placeholder="Your answer...">
+                <input type="text" id="q2" step="any" required placeholder="Your answer...">
                 <button type="submit">Submit</button>
             </div>
             <div id="result-2" class="result-message"></div>
         </form>
 
         <form id="quiz-form-3" class="quiz-form">
-            <label for="q3">$$\lim_{x \to 2} \frac{x^2-2}{x-2}$$</label>
+            <label for="q3">
+                Given
+                $$\lim_{x\to 4} f(x)=9,\qquad \lim_{x\to 4} g(x)=7.$$
+                Find
+                $$\lim_{x\to 4} \frac{\sqrt{f(x)+7},\bigl(g(x)^2-13\bigr)}{\sqrt[3]{,2f(x)-10,}}.$$
+            </label>
             <div class="input-group">
                 <input type="number" id="q3" step="any" required placeholder="Your answer...">
                 <button type="submit">Submit</button>
