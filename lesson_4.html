@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>derivatives with AboEl5yr</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="l4.js"></script>
+</head>
+<body>
+    <h1 id="l1">Lesson 4: Introduction to Differentiation</h1>
+    <video src=""></video>
+    <p>
+        you have studied limits, how \(\Delta x\) turns into \(dx\). Now it is time to apply this.
+        It is time to learn Differentiation, AKA derivatives. The man himself, Issac Newton, wanted to find the velocity
+        function, knowing only the distance function, but how, after all, velocity is the slope of the line between 2 positions,
+         where the y axis is the time, so he thought of the brilliant idea. Why not use those limits to get the velocity function.
+        lets think of it like this, u want to  get the slope of 2 points, well that is:
+        $$\frac{y_2-y_1}{x_2-x_1}$$
+        AKA
+        $$\frac{f(x_2)-f(x_1)}{x_2-x_1}$$
+        lets asume that \(x_1 = x\) and \(x_2 = x+h\) where h is the amount of increase in x
+        $$\frac{f(x+h)-f(x)}{x+h-x}$$
+        simplifying to:
+        $$\frac{f(x+h)-f(x)}{h}$$
+        now lets use limits to make them approach 1 point:
+        $$\lim_{h \to 0}\frac{f(x+h)-f(x)}{h}$$
+        this is the standard formula for any derivative, however, this formula might be abit to difficult to apply in complicated problems,
+        so there are may rules that have been created over the years, for example:
+        $$\frac{d}{dx} c = 0$$
+    </p>
+
+    <h2 class="try">Try It:</h2>
+    <div class="quizcont">
+        <form id="quiz-form-1" class="quiz-form">
+            <label for="q1">differentiate $$x^2$$ then plug in 3 and enter the value</label>
+            <div class="input-group">
+                <input type="number" id="q1" step="any" required placeholder="Your answer...">
+                <button type="submit">Submit</button>
+            </div>
+            <div id="result-1" class="result-message"></div>
+        </form>
+    </div>
+
+
+
+    <a href="index.html" class="but"><button>Back</button></a>
+
+</body>
+</html>

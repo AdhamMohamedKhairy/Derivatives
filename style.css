@@ -107,9 +107,9 @@ video{
 
 footer{
     display: flex;
+    align-content: center;
     align-items: center;
-    text-align: center;
-    margin: auto;
+    align-self: center;
 }
 
 #l1{
