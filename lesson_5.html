@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>derivatives with AboEl5yr</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="l4.js"></script>
+</head>
+<body>
+    <h1 id="l1">Lesson 4: Introduction to Differentiation</h1>
+    <video src=""></video>
+    <p>
+        you have learned may rules like:
+        $$\frac{d}{dx} c = 0$$
+        $$\frac{d}{dx} c \cdot f(x) = c \cdot \frac{d}{dx} f(x)$$
+        but there are some mor important rules:
+    </p>
+    <h2>1. The Power Rule</h2>
+    <p>
+        this is the easiest rule in all of calculus:
+        $$\frac{d}{dx} x^n = nx^{n-1}$$
+        for example:
+        $$\frac{d}{dx} x^2 = 2x$$
+    </p>
+    <h2>2. The Product Rule</h2>
+    <p>
+        $$\frac{d}{dx} f(x) \cdot g(x) = f'(x) \cdot g(x) + f(x) \cdot g'(x)$$
+        (btw \(f'(x)\) is the same as the derivative and \(f''(x)\) is the second derivative... and so on)
+        for example:
+        $$\frac{d}{dx} x^2 \cdot 3x^3 = 2x \cdot 3x^3 + x^2 \cdot 9x^2$$
+    </p>
+
+    <h2 class="try">Try It:</h2>
+    <div class="quizcont">
+        <form id="quiz-form-1" class="quiz-form">
+            <label for="q1">differentiate $$3x^2$$ then plug in 3 and enter the value</label>
+            <div class="input-group">
+                <input type="number" id="q1" step="any" required placeholder="Your answer...">
+                <button type="submit">Submit</button>
+            </div>
+            <div id="result-1" class="result-message"></div>
+        </form>
+    </div>
+
+
+
+    <a href="index.html" class="but"><button>Back</button></a>
+
+</body>
+</html>
