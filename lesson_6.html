@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>derivatives with AboEl5yr</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="l6.js"></script>
+</head>
+<body>
+    <h1 id="l1">Lesson 6: Exponential rule and Logarithmic rule</h1>
+    <video src=""></video>
+    <p>
+        <strong>disclamer:</strong> there is no rule called exponential rule and logarithmic rule, they are just called "derivative of \(\log\)" or anything else, I just call them that cuz it sounds cool :3 + u can prove any differentiation identity using the standard formula: \(\lim_{h \to 0}\frac{f(x+h) - f(x)}{h}\)
+    </p>
+    <h2>1. Exponential rule</h2>
+    <p>
+        I think u are familar with an exponential function: 
+        $$f(x) = c^x$$
+        the derivative of this function is:
+        $$\frac{d}{dx} f(x) = c^x \cdot \ln(c)$$
+        this also indicates that the only thing that is equal to its own derivative is \(e^x\) because \(\ln(e) = 1\) so:
+        $$\frac{d}{dx} e^x = e^x$$
+    </p>
+
+    <h2>2. The Logarithmic Rule (shout out to Fekry)</h2>
+    <p>
+        $$\frac{d}{dx} \log_c(x) = \frac{1}{x \cdot \ln(c)}$$
+        so by the same logic
+        $$\frac{d}{dx} \ln(x) = \frac{1}{x}$$
+    </p>
+
+    <h2 class="try">Try It:</h2>
+    <div class="quizcont">
+        <form id="quiz-form-2" class="quiz-form">
+            <label for="q2">
+                differentiate:
+                $$
+                h(x)= \ln(x)
+                $$
+                then plug in 2
+            </label>
+            <div class="input-group">
+                <input type="text" id="q2" step="any" required placeholder="Your answer...">
+                <button type="submit">Submit</button>
+            </div>
+            <div id="result-2" class="result-message"></div>
+        </form>
+    </div>
+
+    <a href="index.html" class="but"><button>Back</button></a>
+
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>derivatives with AboEl5yr</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="u2.js"></script>
+</head>
+<body>
+    <h1 id="l1">Unit Test 2: Differentiation I</h1>
+    <div class="utestcont">
+        <form id="quiz-form" class="quiz-form">
+
+            <label>
+                if
+                $$f(x) = 7x^5-3x^2+8$$
+                the \(f(x)\) is:
+            </label>
+            <div class="mcq-options">
+                <label><input type="radio" name="u1_q1" value="A" class="mcq" required> A) \(35x^4-6x\)</label>
+                <label><input type="radio" name="u1_q1" value="B" class="mcq"> B) \(35x^5-6x\)</label>
+                <label><input type="radio" name="u1_q1" value="C" class="mcq"> C) \(35x^4-3x\)</label>
+                <label><input type="radio" name="u1_q1" value="D" class="mcq"> D) \(7x^4-6x\)</label>
+            </div>
+
+            <label>
+                if
+                $$f(x) = x^5-2x^3-4x$$
+                find \(f''(x)\)
+            </label>
+            <div class="mcq-options">
+                <label><input type="radio" name="u1_q2" value="A" class="mcq" required> A) \(20x^3-12x\)</label>
+                <label><input type="radio" name="u1_q2" value="B" class="mcq"> B) \(20x^4−6x^2+4\)</label>
+                <label><input type="radio" name="u1_q2" value="C" class="mcq"> C) \(60x2−12\)</label>
+                <label><input type="radio" name="u1_q2" value="D" class="mcq"> D) \(20x^3-6x\)</label>
+            </div>
+
+            <label>
+                find the third derivative of:
+                $$x^6-3x^4+2x$$
+            </label>
+            <div class="mcq-options">
+                <label><input type="radio" name="u1_q3" value="A" class="mcq" required> A) \(120x^3-72x\)</label>
+                <label><input type="radio" name="u1_q3" value="B" class="mcq"> B) \(30x^4-36x^2+2\)</label>
+                <label><input type="radio" name="u1_q3" value="C" class="mcq"> C) \(360x^2-72\)</label>
+                <label><input type="radio" name="u1_q3" value="D" class="mcq"> D) \(120x^4-72x\)</label>
+            </div>
+
+            <label>
+                differentiate 
+                $$f(x)=4x^3+\frac{2}{x^2}-\frac{5}{x}$$
+            </label>
+            <div class="mcq-options">
+                <label><input type="radio" name="u1_q4" value="A" class="mcq" required> A) \(12x^2 - \frac{4}{x^3} + \frac{5}{x^2}\)</label>
+                <label><input type="radio" name="u1_q4" value="B" class="mcq"> B) \(12x^2 - \frac{4}{x^3} + \frac{5}{x^2}\)</label>
+                <label><input type="radio" name="u1_q4" value="C" class="mcq"> C) \(12x^2 - \frac{2}{x^3} + \frac{5}{x}\)</label>
+                <label><input type="radio" name="u1_q4" value="D" class="mcq"> D) \(12x^2 - \frac{4}{x^2} + \frac{5}{x^2}\)</label>
+            </div>
+
+            <label>
+                if the velocity function of a particle is 
+                $$f(x)=\frac{x^3\sin x+e^x}{x^2}$$
+            </label>
+            <div class="mcq-options">
+                <label><input type="radio" name="u1_q5" value="A" class="mcq" required> A) \(\frac{(4x^3\cos x-x^4\sin x+e^x)x^2+2x(x^4\cos x+e^x)}{x^4}\)</label>
+                <label><input type="radio" name="u1_q5" value="B" class="mcq"> B) \(\frac{(4x^3\cos x-x^4\sin x+e^x)x^2-2x(x^4\cos x+e^x)}{x^4}\)</label>
+                <label><input type="radio" name="u1_q5" value="C" class="mcq"> C) \(\frac{(4x^3\sin x-x^4\cos x+e^x)x^2-2x(x^4\cos x+e^x)}{x^4}\)</label>
+                <label><input type="radio" name="u1_q5" value="D" class="mcq"> D) \(\frac{(4x^3\cos x-x^4\sin x-e^x)x^2-2x(x^4\cos x+e^x)}{x^4}\)</label>
+            </div>
+
+            <label>
+                find the jerk (yes that is a real physics concept, google it) of the velocity function:
+                $$f(x)=x^3e^x\sin x$$
+            </label>
+            <div class="mcq-options">
+                <label><input type="radio" name="u1_q6" value="A" class="mcq" required> A) \(e^x\left[(6x+6x^2)\sin x+(6x^2+x^3)\cos x\right]\)</label>
+                <label><input type="radio" name="u1_q6" value="B" class="mcq"> B) \(e^x\left[(6x+6x^2)\cos x-(6x^2+x^3)\sin x\right]\)</label>
+                <label><input type="radio" name="u1_q6" value="C" class="mcq"> C) \(e^x\left[(6x+6x^2-x^3)\sin x+2(3x^2+x^3)\cos x\right]\)</label>
+                <label><input type="radio" name="u1_q6" value="D" class="mcq"> D) \(e^x\left[(6x+6x^2+x^3)\sin x+2(3x^2+x^3)\cos x\right]\)</label>
+            </div>
+
+            <label>
+                if
+                $$f(x) = \frac{x^2 \sin x - x \cos x}{x+1}$$
+                then \(f'(x) =\)
+            </label>
+            <div class="mcq-options">
+                <label><input type="radio" name="u1_q7" value="A" class="mcq" required> A) \(\frac{(2x \sin x + x^2 \cos x - \cos x + x \sin x)(x+1) + (x^2 \sin x - x \cos x)}{(x+1)^2}\)</label>
+                <label><input type="radio" name="u1_q7" value="B" class="mcq"> B) \(\frac{(2x \sin x + x^2 \cos x - \cos x + x \sin x)(x+1) - (x^2 \sin x - x \cos x)}{(x+1)^2}\)</label>
+                <label><input type="radio" name="u1_q7" value="C" class="mcq"> C) \(\frac{(2x \cos x - x^2 \sin x - \cos x + x \sin x)(x+1) + (x^2 \sin x - x \cos x)}{(x+1)^2}\)</label>
+                <label><input type="radio" name="u1_q7" value="D" class="mcq"> D) \(\frac{(2x \sin x + x^2 \cos x + \cos x - x \sin x)(x+1) + (x^2 \sin x - x \cos x)}{(x+1)^2}\)</label>
+            </div>
+
+            <label>
+                if
+                $$x^3 2^x \log x$$
+            </label>
+            <div class="mcq-options">
+                <label><input type="radio" name="u1_q8" value="A" class="mcq" required> A) \(x^2 2^x \left((x+3)\log x + \frac{1}{\ln 10}\right)\)</label>
+                <label><input type="radio" name="u1_q8" value="B" class="mcq"> B) \(x^2 2^x \left((x \ln 2+3)\log x + \frac{1}{\ln 10}\right)\)</label>
+                <label><input type="radio" name="u1_q8" value="C" class="mcq"> C) \(x^2 2^x \left((x+3)\ln x + \frac{1}{\ln 10}\right)\)\)</label>
+                <label><input type="radio" name="u1_q8" value="D" class="mcq"> D) \(x^2 2^x \left((x+3)log x + \frac{1}{\ln 20}\right)\)</label>
+            </div>
+
+            <label>good luck with the next 2 problems, u will need it...</label>
+
+            <label>
+                differentiate:
+                $$\frac{x^5 2^x \log x \cos x}{x^2+4}$$
+            </label>
+            <div class="mcq-options">
+                <label><input type="radio" name="u1_q9" value="A" class="mcq" required> A) \(\frac{x^5 2^x \log x \cos x}{(x^2+4)^2} \left[ \left( \frac5x + \ln 2 + \frac{1}{x \log x \ln 10} + \tan x \right) (x^2+4) - 2x \right]\)</label>
+                <label><input type="radio" name="u1_q9" value="B" class="mcq"> B) \(\frac{x^5 2^x \log x \cos x}{(x^2+4)^2} \left[ \left( \frac5x + \ln 10 + \frac{1}{x \log x \ln 2} + \tan x \right) (x^2+4) - 2x \right]\)</label>
+                <label><input type="radio" name="u1_q9" value="C" class="mcq"> C) \(\frac{x^5 2^x \log x \cos x}{(x^2+4)^2} \left[ \left( \frac5x + \ln 2 + \frac{1}{x \log x \ln 10} + \sec^2 x \right) (x^2+4) - 2x \right]\)</label>
+                <label><input type="radio" name="u1_q9" value="D" class="mcq"> D) \(\frac{x^5 2^x \log x \cos x}{(x^2+4)^2} \left[ \left( \frac5x + \ln 2 + \frac{1}{x \log x \ln 10} - \tan x \right) (x^2+4) - 2x \right]\)</label>
+            </div>
+
+            <label>
+                Find the second derivative of: $$g(x) = \frac{x^4 7^x \log x \sin x}{(x-2)^2}$$ (good luck)
+            </label>
+            <div class="mcq-options">
+                <label><input type="radio" name="u1_q10" value="A" class="mcq large" required> A) \(
+                                                                                        g(x)\left[
+                                                                                        \left(
+                                                                                        \frac4x+\ln7+\frac{1}{x\log x\,\ln10}
+                                                                                        +\cot x-\frac2{x-2}
+                                                                                        \right)^2
+                                                                                        +
+                                                                                        \left(
+                                                                                        -\frac4{x^2}
+                                                                                        -\frac{1+\log x\,\ln10}
+                                                                                        {x^2\log^2x\,(\ln10)^2}
+                                                                                        -\csc x
+                                                                                        +\frac2{(x-2)^2}
+                                                                                        \right)
+                                                                                        \right]
+                                                                                        \)</label>
+                <label><input type="radio" name="u1_q10" value="B" class="mcq large"> B) \(
+                                                                                        g(x)\left[
+                                                                                        \left(
+                                                                                        \frac4x+\ln7+\frac{1}{x\log x\,\ln10}
+                                                                                        +\cot x-\frac2{x-2}
+                                                                                        \right)
+                                                                                        +
+                                                                                        \left(
+                                                                                        -\frac4{x^2}
+                                                                                        -\frac{1+\log x\,\ln10}
+                                                                                        {x^2\log^2x\,(\ln10)^2}
+                                                                                        -\csc^2x
+                                                                                        +\frac2{(x-2)^2}
+                                                                                        \right)
+                                                                                        \right]
+                                                                                        \)</label>
+                <label><input type="radio" name="u1_q10" value="C" class="mcq large"> C) \(
+                                                                                        g(x)\left[
+                                                                                        \left(
+                                                                                        \frac4x+\ln7+\frac{1}{x\log x\,\ln10}
+                                                                                        +\cot x-\frac2{x-2}
+                                                                                        \right)^2
+                                                                                        +
+                                                                                        \left(
+                                                                                        -\frac4{x^2}
+                                                                                        -\frac{1+\log x\,\ln10}
+                                                                                        {x^2\log^2x\,(\ln10)^2}
+                                                                                        -\csc^2x
+                                                                                        +\frac2{(x-2)^2}
+                                                                                        \right)
+                                                                                        \right]
+                                                                                        \)</label>
+                <label><input type="radio" name="u1_q10" value="D" class="mcq large"> D) \(
+                                                                                        g(x)\left[
+                                                                                        \left(
+                                                                                        \frac4x+\ln10+\frac{1}{x\log x\,\ln10}
+                                                                                        +\cot x-\frac2{x-2}
+                                                                                        \right)^2
+                                                                                        +
+                                                                                        \left(
+                                                                                        -\frac4{x^2}
+                                                                                        -\frac{1+\log x\,\ln10}
+                                                                                        {x^2\log^2x\,(\ln10)^2}
+                                                                                        -\csc^2x
+                                                                                        +\frac2{(x-2)^2}
+                                                                                        \right)
+                                                                                        \right]
+                                                                                        \)</label>
+            </div>
+
+            <button type="submit">Submit</button>
+
+            <div id="result-u" class="result-message"></div>
+        </form>
+    </div>
+
+    <a href="index.html" class="but"><button>Back</button></a>
+</body>
+</html>

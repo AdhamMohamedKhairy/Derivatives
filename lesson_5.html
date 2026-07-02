@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-    <script src="l4.js"></script>
+    <script src="l5.js"></script>
 </head>
 <body>
-    <h1 id="l1">Lesson 4: Introduction to Differentiation</h1>
+    <h1 id="l1">Lesson 5: Power rule, Product rule, Quoteint rule</h1>
     <video src=""></video>
     <p>
         you have learned may rules like:
@@ -25,13 +25,6 @@
         for example:
         $$\frac{d}{dx} x^2 = 2x$$
     </p>
-    <h2>2. The Product Rule</h2>
-    <p>
-        $$\frac{d}{dx} f(x) \cdot g(x) = f'(x) \cdot g(x) + f(x) \cdot g'(x)$$
-        (btw \(f'(x)\) is the same as the derivative and \(f''(x)\) is the second derivative... and so on)
-        for example:
-        $$\frac{d}{dx} x^2 \cdot 3x^3 = 2x \cdot 3x^3 + x^2 \cdot 9x^2$$
-    </p>
 
     <h2 class="try">Try It:</h2>
     <div class="quizcont">
@@ -45,7 +38,38 @@
         </form>
     </div>
 
+    <h2>2. The Product Rule</h2>
+    <p>
+        $$\frac{d}{dx} f(x) \cdot g(x) = f'(x) \cdot g(x) + f(x) \cdot g'(x)$$
+        (btw \(f'(x)\) is the same as the derivative and \(f''(x)\) is the second derivative... and so on)
+        for example:
+        $$\frac{d}{dx} x^2 \cdot 3x^3 = 2x \cdot 3x^3 + x^2 \cdot 9x^2$$
+    </p>
 
+    <h2>3. The Quotient Rule</h2>
+    <p>
+        $$\frac{d}{dx} \frac{f(x)}{g(x)} = \frac{f'(x) \cdot g(x) - f(x) \cdot g'(x)}{[g(x)]^2}$$
+        for example:
+        $$\frac{d}{dx} \frac{x}{5x^2} = \frac{1 \cdot 5x^2 - x \cdot 10x}{[5x^2]^2}$$
+    </p>
+
+    <h2 class="try">Try It:</h2>
+    <div class="quizcont">
+        <form id="quiz-form-2" class="quiz-form">
+            <label for="q2">
+                differentiate:
+                $$
+                h(x)=\frac{(3x^4-2x+1)(x^3+5x-7)}{2x^2-1}
+                $$
+                then plug in 5 and enter the answer to the nearest hundredth
+            </label>
+            <div class="input-group">
+                <input type="text" id="q2" step="any" required placeholder="Your answer...">
+                <button type="submit">Submit</button>
+            </div>
+            <div id="result-2" class="result-message"></div>
+        </form>
+    </div>
 
     <a href="index.html" class="but"><button>Back</button></a>
 

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>derivatives with AboEl5yr</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="l7.js"></script>
+</head>
+<body>
+    <h1 id="l1">Lesson 7: Trig derivaive identities</h1>
+    <video src=""></video>
+    <p>
+        <strong>disclamer:</strong> I won't be proving any of those cuz it is such a brain-melting pain to prove those and write the latex code of the proof, however, I proved \(\frac{d}{dx} \sin(x)\) and \(\frac{d}{dx} \cos(x)\) only. Additionally, I won't be able to show all trig derivatives because of the sheer amount of them. Like why the hell should I know what is \(\frac{d}{dx} \tanh(x)\) (btw it is \(\operatorname{sech}^2(x)\)) If u fade something like this in an exam, u should try to find a simplification using normal trig identities, or just plug it into the general formula: \(\lim_{h \to 0} \frac{f(x+h)-f(x)}{h}\)
+    </p>
+
+    <p>
+        Ok, I HATE trig identities. If u r a functioning human being, you propably hate trig identities, so I will rapid fire through trig differentiation
+        $$\frac{d}{dx} \sin(x) = \cos(x)$$
+        $$\frac{d}{dx} \cos(x) = -\sin(x)$$
+        $$\frac{d}{dx} \tan(x) = \sec^2(x)$$
+        $$\frac{d}{dx} \cot(x) = -\csc^2(x)$$
+        $$\frac{d}{dx} \sec(x) = \sec(x) \tan(x)$$
+        $$\frac{d}{dx} \csc(x) = -\csc(x) \cot(x)$$
+        $$\frac{d}{dx} \sin^{-1}(x) = \frac{1}{\sqrt{1-x^2}}$$
+        $$\frac{d}{dx} \cos^{-1}(x) = -\frac{1}{\sqrt{1-x^2}}$$
+        $$\frac{d}{dx} \tan^{-1}(x) = \frac{1}{1+x^2}$$
+        $$\frac{d}{dx} \cot^{-1}(x) = -\frac{1}{1+x^2}$$
+        
+        And now for the 2 most cursed Identities of all:
+        $$\frac{d}{dx} \sec^{-1}(x) = \frac{1}{|x|\sqrt{x^2-1}}$$
+        $$\frac{d}{dx} \sec^{-1}(x) = -\frac{1}{|x|\sqrt{x^2-1}}$$
+    </p>
+
+    <h2 class="try">Try It:</h2>
+    <div class="quizcont">
+        <form id="quiz-form-2" class="quiz-form">
+            <label for="q2">
+                differentiate:
+                $$
+                h(x) = \sin(x) \cos(x)
+                $$
+                then plug in 45 degrees
+            </label>
+            <div class="input-group">
+                <input type="number" id="q2" step="any" required placeholder="Your answer...">
+                <button type="submit">Submit</button>
+            </div>
+            <div id="result-2" class="result-message"></div>
+        </form>
+    </div>
+
+    <a href="index.html" class="but"><button>Back</button></a>
+
+</body>
+</html>

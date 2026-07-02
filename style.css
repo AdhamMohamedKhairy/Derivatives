@@ -330,3 +330,6 @@ button, .but, .quiz-form button {
     background-color: rgb(22, 22, 22) !important;
 }
 
+.mcq-options mjx-container {
+    font-size: 80% !important;
+}
