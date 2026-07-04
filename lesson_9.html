@@ -7,27 +7,53 @@
     <link rel="stylesheet" href="style.css">
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
-    <script src="l7.js"></script>
+    <script src="l9.js"></script>
 </head>
 <body>
-    <h1 id="l1">Lesson 8: Chain Rule</h1>
+    <h1 id="l1">Lesson 9: implicit differentiation</h1>
     <video src=""></video>
     <p>
-        implicit differentiation is 
+        implicit differentiation is an application on the chain rule which can make your life much much easier than normal, explicit differentiation.
+        The meaning of explicit differentiation is that u take the derivative of x in terms of x, like saying "I am hungry, and I wanna eat shawarma" 
+        when you are hungry, this means that you <strong>explicitly</strong> stated that you are hungry and want shawarma. 
+        However, you could ask your friend (if you have friends ofc) "Are you hungry, there is a real good shawarma chain down two blocks away",
+        this means that you <strong>implicitly</strong> stated that you are hungry and want shawarma. Lemme give you an example.
+        $$x^2 + y^2 = 1$$
+        mnow you can take the explicit route:
+        $$y = \pm \sqrt{1 - x^2}$$
+        and divide it into the 2 equations
+        $$y = + \sqrt{1 - x^2}$$
+        and
+        $$y = - \sqrt{1 - x^2}$$
+        and find \(\frac{dy}{dx}\) by applying the chain rule.
+        but lets in future examples you most likely wont have the delicacy of doing that, so lets try another approch: <br>
+        let's differentiate both sides
+        $$\frac{d}{dx} \left[x^2 + y^2\right] = \frac{d}{dx}1$$
+        now you know that \(\frac{d}{dx} x^2 = 2x\), but what is \(\frac{d}{dx} y^2\), how could you take the derivative of y in terms of x... <br>
+        well, think of it like this: you have \(\frac{d}{dx}\), you can multiply both sides of the fraction by \(dy\):
+        $$\frac{d}{dx} \frac{dy}{dy}$$
+        which is basically:
+        $$\frac{d}{dy} \frac{dy}{dx}$$
+        so it is basically the derivative of y in terms of y times \(\frac{dy}{dx}\), which is exactly the value we are looking for.
+        so going back to the example:
+        $$\frac{d}{dx} \left[x^2 + y^2\right] = \frac{d}{dx}1$$
+        $$ 2x + 2y \cdot \frac{dy}{dx} = 0$$
+        and from here it is basic algebra:
+        $$ 2y \cdot \frac{dy}{dx} = -2x$$
+        $$\frac{dy}{dx} = \frac{-x}{y}$$
     </p>
 
     <h2 class="try">Try It:</h2>
     <div class="quizcont">
         <form id="quiz-form-2" class="quiz-form">
             <label for="q2">
-                differentiate:
                 $$
-                h(x) = \ln(x^3)
+                y = x^x
                 $$
-                then plug in 3 degrees
+                find \(\frac{dy}{dx}\), then plug in 3, writing the answer to the nearest hundredth
             </label>
             <div class="input-group">
-                <input type="number" id="q2" step="any" required placeholder="Your answer...">
+                <input type="text" id="q2" step="any" required placeholder="Your answer...">
                 <button type="submit">Submit</button>
             </div>
             <div id="result-2" class="result-message"></div>
