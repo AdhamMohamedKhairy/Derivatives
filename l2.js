@@ -1,13 +1,13 @@
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
+google.charts.load('current', {'packages':['corechart']})
+google.charts.setOnLoadCallback(drawChart)
 
 function drawChart() {
-  const data = new google.visualization.DataTable();
-  data.addColumn('number', 'X');
-  data.addColumn('number', 'Left Curve');
-  data.addColumn('number', 'Right Line');
-  data.addColumn('number', 'Hole Border');
-  data.addColumn('number', 'Hole Center');
+  const data = new google.visualization.DataTable()
+  data.addColumn('number', 'X')
+  data.addColumn('number', 'Left Curve')
+  data.addColumn('number', 'Right Line')
+  data.addColumn('number', 'Hole Border')
+  data.addColumn('number', 'Hole Center')
 
   data.addRows([
     [0,   0,       null, null, null],
@@ -23,7 +23,7 @@ function drawChart() {
 
     [2,   null,    6,    null, null],   
     [4,   null,    8,    null, null]
-  ]);
+  ])
 
   const options = {
     backgroundColor: 'transparent', 
@@ -47,13 +47,13 @@ function drawChart() {
       2: { type: 'scatter', color: '#d1cdc8', pointSize: 10 }, 
       3: { type: 'scatter', color: 'rgb(71, 73, 71)', pointSize: 4 }
     }
-  };
+  }
 
-  const chart = new google.visualization.ComboChart(document.getElementById('dis'));
+  const chart = new google.visualization.ComboChart(document.getElementById('dis'))
 
-  chart.draw(data, options);
+  chart.draw(data, options)
   if (window.MathJax) {
-    MathJax.typesetPromise();
+    MathJax.typesetPromise()
   }
 }
 
@@ -65,11 +65,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const result1 = document.getElementById('result-1')
 
         if (answer1 === 4) {
-            result1.textContent = "Correct!";
-            result1.className = "result-message correct";
+            result1.textContent = "Correct!"
+            result1.className = "result-message correct"
         } else {
-            result1.textContent = "Wrong. Try again";
-            result1.className = "result-message wrong";
+            result1.textContent = "Wrong. Try again"
+            result1.className = "result-message wrong"
         }
       })
-});
+})

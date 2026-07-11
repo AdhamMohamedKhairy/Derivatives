@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>derivatives with AboEl5yr</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="e1.js"></script>
+</head>
+<body>
+    <h1 id="l1">Extra lesson 1: L'Hopital's Rule</h1>
+    <p>
+        Before we start, lemme tell you about extra lessons, these are lessons which I won't be covering in much detail, and won't make a test on them.
+        However, I will give you some resources from which you could study them. <br> <br>
+        L'Hopital's Rule is the most crucial rule in solving limits, as it is a workaround for indetermenint values like \(\frac{0}{0}\) or \(\frac{\infty}{\infty}\)
+        but I didn't teach you this beforehand because it involves taking teh derivative of both sides of the fraction in the limit. For example:
+        $$\lim_{x \to 0} \frac{x^2}{2x}$$
+        to evaluate this limit, you can take the derivative of both sides of the fraction as many times as you want:
+        $$\lim_{x \to 0} \frac{\frac{d}{dx} x^2}{\frac{d}{dx} 2x}$$
+        $$\lim_{x \to 0} \frac{2x}{2}$$
+        $$\lim_{x \to 0} \frac{x}{1}$$
+        then plug in \(x = 0\) and you find that the limit as this function approches 0 is 0
+    </p>
+
+    <h2 class="try">Try It:</h2>
+    <div class="quizcont">
+        <form id="quiz-form-2" class="quiz-form">
+            <label for="q2">
+                $$
+                \lim_{x \to 0} \frac{\ln(1+x) - x + \frac{x^2}{2}}{x^3}
+                $$
+                wright it as a fraction
+            </label>
+            <div class="input-group">
+                <input type="text" id="q2" step="any" required placeholder="Your answer...">
+                <button type="submit">Submit</button>
+            </div>
+            <div id="result-2" class="result-message"></div>
+        </form>
+    </div>
+
+    <h2>here are some resorces that you can us: </h2>
+    <p>
+        <a href="https://youtu.be/Gh48aOvWcxw?si=s4fTc7Ht6P-XFIFm"> L'Hopital's Rule by Organic Chemistry Tutor</a> <br>
+        <a href="https://youtu.be/Zd7wd24jeok?si=EZCraoB-mLmg_qC_"> L'Hopital's Rule by Professor Leonard</a> <br>
+        <a href="https://youtu.be/kfF40MiS7zA?si=UgzQskBGPq6fDAwk"> L'Hopital's Rule by Three Blue One Brown (don't watch this unless u already understand l'hopital's rule and only need something to visulaize it)</a> <br>
+    </p>
+
+    <a href="index.html" class="but"><button>Back</button></a>
+
+</body>
+</html>

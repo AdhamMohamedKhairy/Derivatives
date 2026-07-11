@@ -70,6 +70,11 @@ p {
     box-shadow: 0px 0px 7px #d1cdc8;
 }
 
+.test{
+    grid-column: span 2;
+    max-width: 880px;
+}
+
 .lc {
     display: block;
     width: 100%;
@@ -117,7 +122,7 @@ footer{
     text-align: center;
 }
 
-.imgcont, .chartcont{
+.imgcont, .chartcont, .figcont{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -141,6 +146,17 @@ footer{
     margin: 10px auto;
     width: 1200px;
     border-radius: 5px;
+}
+
+.vidcont{
+    width: 90%;
+    aspect-ratio: 16 / 9;
+}
+
+.vidcont iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 .imgcont:hover {
@@ -332,4 +348,11 @@ button, .but, .quiz-form button {
 
 .mcq-options mjx-container {
     font-size: 80% !important;
+}
+
+a{
+    color: #d1cdc8;
+}
+a:hover{
+    color: #afa9a3;
 }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>derivatives with AboEl5yr</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="e3.js"></script>
+</head>
+<body>
+    <h1 id="l1">Extra Lesson 3: Introduction to Integration</h1>
+    <p>
+        Ok I know that I said I won't be explaining integration in this course, but I felt like leaving yall on a cliffhanger wasn't the best thing
+        to do, so I will be explaining the basics of integration and integration techniuqes of Calc 1. However, I won't be going in depth into things
+        like the taylor series or the Disk/Washer methode. You will be learning in this course things like Partial fractions, and By Parts Integration
+        so lets get into it: <br>
+        Now when sir. Isaac Newton invented Integral and Differential Calculus, he wanted a way to reverse differentaition. Thus, he thought that 
+        the to take the area under the curve of the slope to see if it would reverse it, for example, picture this function
+    </p>
+    <div class="chartcont">
+        <div id="dis1"></div>
+        <div class="axis-label y-axis">$$f(x)$$</div>
+        <div class="axis-label x-axis">$$x$$</div>
+    </div>
+    <p>its slope would be 1, now lets graph f(x) = 1</p>
+
+
+    <div class="chartcont">
+        <div id="dis2"></div>
+        <div class="axis-label y-axis">$$f(x)$$</div>
+        <div class="axis-label x-axis">$$x$$</div>
+    </div>
+    <p>
+        if we calculate the area under this curve, we would get 4, which is the exact same value as f(x), so we can deduce that the area under the curve is the inverse 
+        of the slope, but isn't differentiation just a slope of a point, then its inverse is the area under the curve, which is integration. But How
+        can we find the area under the curve, after alla curve cant be divided into squares or triangles which have standard formulas for the area,
+        so let's think of it from another prespective, we know that \(dx\) is just a really really tiny nudge of \(x\) that approaches zero,
+        so, the area under a point is equal to
+        $$f(x) dx$$
+        but this "area" isn't really an area, it is more like a line, and what is the definaation of area: the sum of many lines, many many lines,
+        an infinit number of lines, and the symbol of the sum of all real numbers is \(\int\), so we can say that the area under the curve is equal to:
+        $$\int f(x) dx$$
+        There are 2 types of integrals (there are many more types of integrals but you don't need to know them all)
+        INDEFINATE INTEGRALS AND DEFINATE INTEGRALS
+        definate integrals are when you take the area under a curve with boundries, for example I want to take the area under the curve form 
+        x = 2 to x = 4, it is solved like this:
+        $$\int^{b}_{a} f(x) dx = \left[F(x)\right]^{b}_{a}$$
+        $$\left[F(x)\right]^{b}_{a} = F(b) - F(a)$$
+        btw F(x) is just another way to say \(\int f(x) dx\) <br>
+        lemme give you an example
+        $$\int^{4}_{2} x^2 dx$$
+        now keep in mind that the main way to solve integrals is to reverse the derivative,
+        so for example, the reverse of the power rule of derivatives is \(\int x^n dx = \frac{x^{n+1}}{n+1} + c\) I will tell you what is the plus c
+        so lets apply the power rule
+        $$\int^{4}_{2} x^2 dx = \left[\frac{x^3}{3}\right]^{4}_{2}$$
+        $$\left[\frac{x^3}{3}\right]^{4}_{2} = \frac{4^3}{3} - \frac{2^3}{3}$$
+        one key property of definate integration is that it returns a number, a value, not a function <br>
+        on the other hand, Indefintate integration returns a function \(F(x)\), not a value, and its formula:
+        $$\int f(x) dx =  F(x) + c$$
+        the c here accounts for the fact that if there where a constant in the pre-derivative state of the function, for example,
+        if I take the derivative of \(f(x)\) where:
+        $$f(x) =  2x + 3$$
+        it would be:
+        $$f'(x) = 2$$
+        if I take the anti-derivative (aka integral) of \(f'(x)\):
+        $$\int f'(x) =  2x$$
+        I would have no way to find that constant, so I just add \(c\) to the function to account for any constants
+        $$\int f'(x) =  2x + c$$
+        also some key properties of integration are:
+        $$\int^{a}_{b} f(x) dx = $$-\int^{b}_{a} f(x) dx$$
+        $$\int f(x)+ g(x) dx = $$\int f(x) + \int g(x) dx$$
+        $$\int f(x)- g(x) dx = $$\int f(x) - \int g(x) dx$$
+        $$\int c dx = $$\int cx dx$$
+        $$\int c f(x) dx = c $$\int f(x) dx$$ 
+    </p>
+
+
+    <h2 class="try">Try It:</h2>
+    <div class="quizcont">
+        <form id="quiz-form-2" class="quiz-form">
+            <label for="q2">
+                $$
+                \int^{4}_{2} 2x dx
+                $$
+            </label>
+            <div class="input-group">
+                <input type="number" id="q2" step="any" required placeholder="Your answer...">
+                <button type="submit">Submit</button>
+            </div>
+            <div id="result-2" class="result-message"></div>
+        </form>
+    </div>
+
+    <a href="index.html" class="but"><button>Back</button></a>
+
+</body>
+</html>

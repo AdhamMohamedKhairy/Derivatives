@@ -6,11 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const result1 = document.getElementById('result-2')
 
         if (answer1 === 0) {
-            result1.textContent = "Correct!";
-            result1.className = "result-message correct";
+            result1.textContent = "Correct!"
+            result1.className = "result-message correct"
         } else {
-            result1.textContent = "Wrong. Try again";
-            result1.className = "result-message wrong";
+            result1.textContent = "Wrong. Try again"
+            result1.className = "result-message wrong"
         }
       })
-});
+})

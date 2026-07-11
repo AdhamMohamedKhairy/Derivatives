@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>derivatives with AboEl5yr</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="e1.js"></script>
+</head>
+<body>
+    <h1 id="l1">Extra lesson 2: Automatic differentiatio</h1>
+    <p>
+        Before we start, Lemme tell you that this is the mso useless piece of information you will learn this course.
+        it is jsut smthing I found while doomscrolling and thought it was cool. <br> <br>
+        Automatic Differentiation is a technique used by computers to compute derivatives faster.
+        This technique utilizes smth called <i>dual hypercomplex numbers</i> which are writen in then form \(a + b \epsilion \) where \(a\)
+        and \(b\) are real numbers and epsilion (\(\epsilion\)) equals:
+        $$\begin{bmatrix} 0 & 1 \\ 0 & 0 \end{bmatrix}$$
+        These numbers are very similar to imaginary numbers \(i\), execpt that their key propety isn't \(i^2 = -1\), it is \(\epsilion ^2 = 0\)
+        these numbers are used for automomatic differentiation using this formula:
+        $$f(x+ \epsilion) = f(x) + \epsilion f'(x)$$
+        for example:
+        $$x^2+2x+1$$
+        $$(x+ \epsilion)^2+2(x+ \epsilion)+1$$
+        $$x^2 + 2x\epsilion + \epsilion^2 + 2x + 2\epsilion + 1$$
+        and since \(\epsilion^2 = 0\)
+        $$x^2 + 2x + 1 + 2x\epsilion + 2\epsilion $$
+        notice anything? <br>
+        the first 3 terms are the exact value of \(f(x)\) and the last 2 terms are \(\epsilion (2x + 2)\) which is \(\epsilion f'(x)\)
+    </p>
+
+    <h2>here are some resorces that you can us: </h2>
+    <p>
+        <a href="https://www.youtube.com/watch?v=yZcCXRfdj7w"> Dual Numbers</a>
+    </p>
+
+    <a href="index.html" class="but"><button>Back</button></a>
+
+</body>
+</html>

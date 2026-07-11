@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>derivatives with AboEl5yr</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+    <script src="https://tikzjax.com/v1/tikzjax.js"></script>
+    <script src="e4.js"></script>
+</head>
+<body>
+    <h1 id="l1">Extra lesson 4: Techniuqes of Integration</h1>
+    <div class="vidcont">
+        <iframe
+            src="https://www.youtube.com/embed/XeRIN9dElrs"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <p>
+        Before I start, lemme tell you that this lesson... is going to be the absolue hardest lesson you take in this course to apply,
+        even harder than the chain rule. so you have to practice alot
+    </p>
+    <h2>1. u-substitution</h2>
+    <p>
+        u-sub is the most key technique u need to solve integrals, it involves substittuting in u instead of x and changinf the refrence from
+        \(dx\) to \(du\), lemme give an example:
+        $$\int \frac{ln(x)}{x} dx$$
+        now this is completely solvable using an by parts (stay tunned for that), but let's make our lives much much easier,
+        lets change the reference point from x to u, now u already know that the derivative of \(\ln(x) = \frac 1x\), so u can assume that
+        $$u = \ln(x)$$
+        and by basic implicit differentiation:
+        $$du = \frac{1}{x} dx$$
+        and then substatute those in:
+        $$\int u du$$
+        and this is just the power rule:
+        $$\int u du = \frac{u^2}{2} +c$$
+        and then substatute back in \(\ln(x)\)
+        $$F(x) = \frac{(\ln(x))^2}{2} + c$$
+        u-sub is the greatest technique of all time and it has many applications in math, not just in calc.
+    </p>
+
+    <h2 class="try">Try It:</h2>
+    <div class="quizcont">
+        <form id="quiz-form-1" class="quiz-form">
+            <label for="q1">
+                $$
+                \int^{180}_{90} \sin(x) \cos^{66}(x) dx
+                $$
+                write the answer in terms of a fraction
+            </label>
+            <div class="input-group">
+                <input type="text" id="q1" step="any" required placeholder="Your answer...">
+                <button type="submit">Submit</button>
+            </div>
+            <div id="result-1" class="result-message"></div>
+        </form>
+    </div>
+
+    <h2>2. Algebraic Manipulation of integrals</h2>
+    <p>
+        Trust me, this techunique will make ur life so much, and I mean SO MUCH easier..., and it doesn't involve calculus, all the work is done
+        using pre-calc knowledge:
+        for example:
+        $$\int \sqrt{1+\sin(2x)} dx$$
+        now, if u don't know ur trig, u are basically cooked, but if u do know ur trig, u would notice that:
+        $$1 = \sin(x)^2 +\cos(x)^2$$
+        AND
+        $$\sin(2x) = 2\sin(x) \cos(x)$$
+        so we can substatute that in:
+        $$\int \sqrt{\sin(x)^2 + \cos(x)^2 + 2\sin(x) \cos(x)} dx$$
+        notice anything? look again, now do u see it? do u see the idea?
+        $$\sin(x)^2 + \cos(x)^2 + 2\sin(x) \cos(x) = (\sin(x) + \cos(x))^2$$
+        the square root is cancelled wit the power, and we end up with:
+        $$\int \sin(x) + \cos(x)$$
+        and I this you can take it on from here, u can do this with any pre-calc mathimatics concept like long division, log identities, or algibraic maipulation in general
+    </p>
+
+    <h2 class="try">Try It:</h2>
+    <div class="quizcont">
+        <form id="quiz-form-2" class="quiz-form">
+            <label for="q2">
+                $$
+                \int \frac{x^2 + 5x + 6}{x+2} dx
+                $$
+                then plug in 2 for x and 3 for c
+            </label>
+            <div class="input-group">
+                <input type="number" id="q2" step="any" required placeholder="Your answer...">
+                <button type="submit">Submit</button>
+            </div>
+            <div id="result-2" class="result-message"></div>
+        </form>
+    </div>
+
+    <h2>3. Partial Fractions</h2>
+    <p>
+        Now we are getting into hard stuff teritory, partail fraction integration is like taking an ugly thing and spliting it into 3 equally-ugly things.
+        so get ready, partual fractions is a technique wher u split a rational fuction into 2 and solve for the ploynomyals of it.
+        so:
+        $$\frac{px + q}{(ax+b)(cx+d)} = \frac{A}{ax+b} + \frac{B}{cx+d}$$
+        and then solving for A and B, think of it like the reverse of fraction addition. Lemme give You an example to clear things up:
+        $$\int \frac{1}{(x+1)(x-1)} dx$$
+        $$\frac{1}{(x+1)(x-1)} = \frac{A}{x+1} + \frac{B}{x-1}$$
+        multiply both sides by \((x+1)(x-1)\)
+        $$A(x-1) + B(x+1) = 1$$
+        then find the solution of both polynomyals, whcih are 1 and -1 respectively. Pluging in 1:
+        $$A(1-1) + B(1+1) = 1$$
+        $$2B = 1$$
+        $$B = \frac12$$
+        and -1:
+        $$A(-1-1) + B(-1+1) = 1$$
+        $$-2A = 1$$
+        $$A = -\frac12$$
+        then u have the final integral to be:
+        $$\int \frac{-1}{2x+2} + \frac{1}{2x-2} dx$$
+        which can be solved with normal differentiation rules
+        partial fractions is a very powerful techunique and it is ver complex ith bigger polynomyals, but it is nothing compared to the next 2.
+        from here on, I won't be putting any more "try it"s
+    </p>
+
+    <h2>4. Trigonometric Substitution</h2>
+    <p>
+        <strong>disclamer:</strong> I won't be able to explain this concept clearly unless I am explaining it in a video, so please watch the video. <br>
+        So I am going to try to be as clear as possible, in trig sub, u try to think of 3 terms which fit the descriptain of a triangle's sides.
+        for example:
+        $$\int \frac{dx}{\sqrt{4 + x^2}}$$
+        notice anything? the denominator can be the hypotunuse (sorry for the terrible spelling) of a triangle with sides 2 and x;
+    </p>
+    <div class="figcont">
+        <svg width="300" height="220" viewBox="0 0 300 220">
+            <line x1="50" y1="180" x2="200" y2="180" stroke="white" stroke-width="2"/>
+            <line x1="50" y1="180" x2="50" y2="40" stroke="white" stroke-width="2"/>
+            <line x1="50" y1="40" x2="200" y2="180" stroke="white" stroke-width="2"/>
+
+            <rect x="50" y="165" width="15" height="15"
+                fill="none" stroke="white" stroke-width="2"/>
+
+            <text x="115" y="198" fill="white" font-size="18">2</text>
+
+            <text x="20" y="115" fill="white" font-size="18">x</text>
+
+            <text x="120" y="95" fill="white" font-size="16">√(4+x²)</text>
+        </svg>
+    </div>
+    <p>
+        so we can substatute this value a bit, let's recall what tan is... \(\tan \theta = \frac{opp.}{adj.}\),
+        if we assume that \(\theta\) is the angle between 2 and the hypo., we can deduce that:
+        $$\tan \theta = \frac x2$$
+        $$\therefore 2\tan \theta = x$$
+        and don't forget to change the reference
+        $$dx = 2sec^2 (\theta) d\theta$$
+        subing into the original integral:
+        $$\int \frac{2sec^2 (\theta) d\theta}{\sqrt{4 + 4\tan^2 \theta}}$$
+        $$\int \frac{2sec^2 (\theta) d\theta}{2\sqrt{1 + \tan^2 \theta}}$$
+        $$\int \frac{2sec^2 (\theta) d\theta}{2\sqrt{\sec^2 \theta}}$$
+        $$\int \frac{2sec^2 (\theta) d\theta}{2\sec \theta}$$
+        simplifying:
+        $$\int sec \theta d\theta$$
+        to integrate that, we can use algebraic manipulation by adding \(\sec \theta + \tan \theta\) to both sides
+        $$
+        \int \sec\theta\, d\theta
+        =
+        \int
+        \frac{\sec^2\theta+\sec\theta\tan\theta}
+        {\sec\theta+\tan\theta}
+        \,d\theta.
+        $$
+
+        Let
+
+        $$
+        u=\sec\theta+\tan\theta,
+        $$
+
+        then
+
+        $$
+        du=(\sec\theta\tan\theta+\sec^2\theta)\,d\theta.
+        $$
+
+        Hence,
+
+        $$
+        \int \sec\theta\,d\theta
+        =
+        \int \frac{du}{u}
+        =
+        \ln|u|+C
+        =
+        \ln|\sec\theta+\tan\theta|+C.
+        $$
+
+        Back-substitute using
+
+        $$
+        \tan\theta=\frac{x}{2},
+        \qquad
+        \sec\theta=\frac{\sqrt{4+x^2}}{2},
+        $$
+
+        to obtain
+
+        $$
+        \int \frac{dx}{\sqrt{4+x^2}}
+        =
+        \ln\left|
+        \frac{\sqrt{4+x^2}}{2}
+        +
+        \frac{x}{2}
+        \right|
+        +C
+        $$
+        this technique is so useful, yet so dreadful. However, It doesn't compare to what is coming next...
+    </p>
+        
+    <h2>5. BY PARTS INTEGRATION</h2>
+    <p>
+        <strong>disclamer:</strong> I won't be able to explain this concept clearly unless I am explaining it in a video, so please watch the video. <br>
+        BY PARTS INTEGRATION IS THE MOST DRULING, MOST AGRRESSIVE FORM OF INTEGRATION, IT IS SO TIME CONSUMING THAT IT <strong>EAT YOUR SOUL</strong>
+        so I will try to explain it, the general formula is:
+        $$\int u dv = uv -\int v du$$
+        appears easy enough, but if you choose the wrong variable u are screwed, lemme give an example:
+        $$\int \ln x dx$$
+        there is no standard formula for this so lets divide that into 2 functions \(\ln x\) and \(1 dx\), so we can now assume that
+        $$u = \ln(x)$$
+        $$dv = 1 dx $$
+        but how did we choose which variable is which? well we use smth called <i>differential favorability</i>, basically which function would be 
+        easier to differntiate, and which would be easier to integrate (remember, we differntiate u and integrate dv), and this is decided by
+        the <strong>LIATE</strong> rule, which stands for: "logarithmic, inverse trigonometric, algebraic, trigonometric, exponential", they are listed
+        so that the first (logarithmic) is easiest to differentaite, and the last (exponential) is easiest to integrate. Back to our example, \(ln x\)
+        is a logarithmic function, and 1 dx is an algebraic function, so we differentaite ln and integrate 1:
+        $$u = \ln(x)$$
+        $$dv = 1 dx $$
+        $$du = \frac{1}{x} dx$$
+        $$v = x$$
+        using the standard formula:
+        $$\int u dv = uv -\int v du$$
+        $$\ln(x) \cdot x -\int x \frac 1x dx$$
+        $$\ln(x) \cdot x -\int 1 dx$$
+        $$\ln(x) \cdot x - x$$
+        $$x(\ln(x) - 1)$$
+        this lesson took me like 4h to write + the video T-T
+    </p>
+    
+
+    <a href="index.html" class="but"><button>Back</button></a>
+
+</body>
+</html>
