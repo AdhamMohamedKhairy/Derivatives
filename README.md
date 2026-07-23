@@ -6,6 +6,33 @@ So first, I started making the home page, styling the lesson grid, text, and bac
 The lessons go like this: <br>
 Limits => unit test => basics of differentiation => unit test => chain rule and its applications => unit test => advanced differentiation topics and integration. <br>
 The hardest part was adding the charts; it took like 5h of research until I watched a video of someone using Google Charts. <br>
+
+Here is how to use this website properly: <br>
+First, you click on the lesson you want to learn <br>
+
+![First lessons](https://github.com/AdhamMohamedKhairy/Derivatives/blob/30dfbad6d8081a5c3d01a559412ebd916f0eb888/Screenshot%202026-07-23%20101324.png) <br>
+![Second Lessons](https://github.com/AdhamMohamedKhairy/Derivatives/blob/30dfbad6d8081a5c3d01a559412ebd916f0eb888/Screenshot%202026-07-23%20101339.png) <br>
+![Third lessons](https://github.com/AdhamMohamedKhairy/Derivatives/blob/30dfbad6d8081a5c3d01a559412ebd916f0eb888/Screenshot%202026-07-23%20101349.png) <br>
+![Last lessons](https://github.com/AdhamMohamedKhairy/Derivatives/blob/30dfbad6d8081a5c3d01a559412ebd916f0eb888/Screenshot%202026-07-23%20101406.png) <br>
+
+Then you listen to the video: <br>
+
+![video](https://github.com/AdhamMohamedKhairy/Derivatives/blob/30dfbad6d8081a5c3d01a559412ebd916f0eb888/Screenshot%202026-07-23%20101438.png) <br>
+
+Then you read the content: <br>
+
+![Content](https://github.com/AdhamMohamedKhairy/Derivatives/blob/30dfbad6d8081a5c3d01a559412ebd916f0eb888/Screenshot%202026-07-23%20101448.png) <br>
+
+Then check your comprehension: <br>
+
+![Try It](https://github.com/AdhamMohamedKhairy/Derivatives/blob/30dfbad6d8081a5c3d01a559412ebd916f0eb888/Screenshot%202026-07-23%20101540.png) <br>
+
+Then answer the unit test <br>
+
+![Unit test](https://github.com/AdhamMohamedKhairy/Derivatives/blob/30dfbad6d8081a5c3d01a559412ebd916f0eb888/Screenshot%202026-07-23%20101515.png) <br>
+
+And if you want to dig deeper, go check out Professor Leonard: https://www.youtube.com/@ProfessorLeonard
+
 I used AI mainly to help with debugging JS errors. <br>
 Here is a video with some instructions: https://youtu.be/46XQRhlCuXU <br>
 Hope you like the website :3
